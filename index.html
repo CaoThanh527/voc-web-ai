@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<!-- 
+    ==================================================================================
+    TÀI LIỆU HTML5 CHUẨN SEMANTIC - PORTFOLIO CÁ NHÂN: LƯƠNG MINH ĐẠT
+    Phiên bản: Thuần HTML (Không sử dụng CSS, không sử dụng hình ảnh)
+    Mục đích: Tập trung thể hiện cấu trúc ngữ nghĩa thuần túy, tối ưu cho SEO & Accessibility.
+    ==================================================================================
+-->
+
+<!-- 
+    ==================================================================================
+    1. KHỞI TẠO TÀI LIỆU & THẺ <html>
+    ----------------------------------------------------------------------------------
+    - <!DOCTYPE html>:
+      + Trình duyệt: Báo cho trình duyệt biết tài liệu được viết theo tiêu chuẩn HTML5 hiện đại,
+        ngăn trình duyệt rơi vào "Quirks Mode" (chế độ tương thích cũ) và kích hoạt "Standards Mode".
+      + SEO: Giúp các công cụ thu thập dữ liệu (crawlers) nhận biết cấu trúc mã nguồn tiêu chuẩn.
+    
+    - <html lang="vi">:
+      + Trình duyệt: Cho phép trình duyệt xác định ngôn ngữ trang để hỗ trợ tự động gợi ý dịch thuật
+        và kiểm tra lỗi chính tả (spellcheck).
+      + SEO: Báo hiệu cho Google/Bing rằng đối tượng độc giả mục tiêu là người nói tiếng Việt,
+        giúp tăng thứ hạng tìm kiếm địa phương (Local Search).
+      + Accessibility: Hướng dẫn trình đọc màn hình (Screen Reader - NVDA, JAWS, VoiceOver) 
+        kích hoạt giọng đọc tiếng Việt với ngữ điệu chuẩn xác, tránh phát âm sai từ ngữ.
+    ==================================================================================
+-->
+<html lang="vi">
+<head>
+    <!-- 
+        ==============================================================================
+        2. PHẦN ĐẦU TÀI LIỆU: THẺ <head> VÀ METADATA
+        ------------------------------------------------------------------------------
+        - <head>: Chứa siêu dữ liệu (Metadata) máy học được (Machine-readable), không hiển thị 
+          trên giao diện nhưng điều khiển cách trình duyệt và công cụ tìm kiếm xử lý trang.
+        - <meta charset="UTF-8">: Bảng mã Unicode, đảm bảo ký tự tiếng Việt có dấu hiển thị chính xác.
+        - <meta name="viewport" content="width=device-width, initial-scale=1.0">:
+          Cấu hình tỷ lệ hiển thị chuẩn trên mọi thiết bị (màn hình di động, máy tính bảng, desktop).
+        - <meta name="description">: Đoạn trích dẫn tóm tắt xuất hiện trên trang kết quả tìm kiếm (Google SERP Snippet).
+        - <title>: Tiêu đề tab trình duyệt, yếu tố On-page SEO quan trọng bậc nhất để xếp hạng từ khóa.
+        ==============================================================================
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Portfolio cá nhân của Lương Minh Đạt - Chuyên gia Lập trình Web Front-End đam mê phát triển giao diện chuẩn Semantic HTML5, tối ưu SEO và Accessibility.">
+    <meta name="author" content="Lương Minh Đạt">
+    <meta name="keywords" content="Lương Minh Đạt, Front-End Developer, Web Portfolio, Semantic HTML5, Web Accessibility, SEO">
+
+    <title>Lương Minh Đạt | Chuyên gia Lập trình Web Front-End</title>
+</head>
+<body>
+
+    <!-- 
+        ==============================================================================
+        3. THẺ <header>: PHẦN ĐẦU TRANG WEB
+        ------------------------------------------------------------------------------
+        - Vai trò ngữ nghĩa: Đại diện cho khu vực giới thiệu, biểu trưng nhận diện và thanh điều hướng chính.
+        - Trình duyệt: Xác định đây là khối nội dung mở đầu của tài liệu, thuộc nhóm Landmark Elements.
+        - SEO: Chứa thông tin nhận diện thương hiệu cá nhân/doanh nghiệp, giúp bot định danh Entity người sở hữu.
+        - Accessibility: Tương đương vai trò ARIA Landmark "banner". Người khiếm thị dùng phím tắt có thể
+          nhảy trực tiếp đến hoặc bỏ qua phần đầu trang này.
+        ==============================================================================
+    -->
+    <header>
+        <!-- Logo thương hiệu cá nhân -->
+        <p>
+            <strong>LMD - Lương Minh Đạt</strong><br>
+            <small>Chuyên gia Lập trình Web Front-End</small>
+        </p>
+
+        <!-- 
+            ==========================================================================
+            THẺ <nav>: THANH ĐIỀU HƯỚNG CHÍNH (PRIMARY NAVIGATION)
+            --------------------------------------------------------------------------
+            - Vai trò ngữ nghĩa: Đánh dấu khối chứa các siêu liên kết điều hướng quan trọng nhất của trang.
+            - Trình duyệt: Hiểu đây là menu liên kết điều hướng nòng cốt.
+            - SEO: Thông báo cho công cụ tìm kiếm các trang/mục nội bộ quan trọng (Internal Linking), 
+              giúp bọ tìm kiếm (Googlebot) lập chỉ mục cấu trúc trang và hỗ trợ hiển thị Sitelinks.
+            - Accessibility: Tương đương vai trò ARIA Landmark "navigation". Khi người khiếm thị duyệt web,
+              trình đọc màn hình sẽ thông báo "Vùng điều hướng" và cho phép duyệt nhanh danh sách liên kết.
+            ==========================================================================
+        -->
+        <nav aria-label="Điều hướng chính của trang">
+            <ul>
+                <li><a href="#about">Giới thiệu bản thân</a></li>
+                <li><a href="#skills">Kỹ năng chuyên môn</a></li>
+                <li><a href="#projects">Dự án nổi bật</a></li>
+                <li><a href="#contact">Thông tin liên hệ</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <!-- 
+        ==============================================================================
+        4. THẺ <main>: NỘI DUNG TRỌNG TÂM CỦA TRANG
+        ------------------------------------------------------------------------------
+        - Vai trò ngữ nghĩa: Chứa nội dung cốt lõi, độc nhất và riêng biệt của trang web.
+        - Trình duyệt & Tiêu chuẩn W3C: Trong một tài liệu HTML hợp lệ chỉ được phép tồn tại 
+          DUY NHẤT một thẻ <main> hiển thị (không ẩn).
+        - SEO: Công cụ tìm kiếm đặt trọng số cao nhất vào các từ khóa và văn bản nằm trong thẻ <main>, 
+          đồng thời bỏ qua các phần lặp lại giữa các trang như <header> và <footer>.
+        - Accessibility: Đóng vai trò ARIA Landmark "main". Người dùng sử dụng thiết bị trợ năng 
+          có thể bấm phím tắt để nhảy thẳng vào đọc nội dung mà không bị làm phiền bởi menu.
+        ==============================================================================
+    -->
+    <main>
+
+        <!-- 
+            ==========================================================================
+            SECTION 1: <section id="about"> - GIỚI THIỆU BẢN THÂN
+            --------------------------------------------------------------------------
+            - Vai trò ngữ nghĩa: Phân đoạn một chủ đề nội dung độc lập trong tài liệu.
+            - Trình duyệt & SEO: <section> kết hợp cùng thẻ tiêu đề phân cấp (<h1>, <h2>) tạo nên
+              Document Outline hoàn chỉnh, giúp thuật toán công cụ tìm kiếm phân tích ngữ nghĩa logic.
+            - Thẻ <h1>: Tiêu đề quan trọng nhất trên toàn trang, đại diện cho chủ đề cốt lõi. 
+              Mỗi trang chuẩn SEO chỉ nên có 1 thẻ <h1> duy nhất.
+            - Accessibility: Tạo vùng "region" giúp người dùng phím tắt dễ dàng định vị.
+            ==========================================================================
+        -->
+        <section id="about" aria-labelledby="about-heading">
+            <h1 id="about-heading">Lương Minh Đạt</h1>
+            <p><strong>Vị trí:</strong> Chuyên gia Lập trình Web Front-End (Front-End Developer)</p>
+            <p><strong>Trạng thái:</strong> Đang sẵn sàng tiếp nhận các cơ hội hợp tác và dự án mới.</p>
+
+            <h2>Tóm Tắt Bản Thân</h2>
+            <p>
+                Tôi là một kỹ sư lập trình giao diện Web (Front-End Developer) với đam mê xây dựng những trải nghiệm số 
+                mượt mà, tối ưu hiệu năng tải trang và tuân thủ nghiêm ngặt các tiêu chuẩn quốc tế về ngữ nghĩa (Semantic HTML5), 
+                khả năng tiếp cận cho mọi người (Web Accessibility - WCAG) cùng kỹ thuật tối ưu hóa công cụ tìm kiếm (Technical SEO).
+            </p>
+            <p>
+                <strong>Mục tiêu nghề nghiệp:</strong> Đồng hành cùng doanh nghiệp phát triển các ứng dụng web quy mô lớn, 
+                đảm bảo khả năng bảo trì cao, tốc độ tải vượt trội và trải nghiệm thân thiện với người dùng.
+            </p>
+        </section>
+        <hr>
+
+        <!-- 
+            ==========================================================================
+            SECTION 2: <section id="skills"> - KỸ NĂNG CHUYÊN MÔN
+            --------------------------------------------------------------------------
+            - Vai trò ngữ nghĩa: Nhóm các năng lực kỹ thuật thành một khu vực chuyên đề.
+            - SEO: Cung cấp danh sách từ khóa công nghệ (Keywords / Tech Stack) phục vụ bộ máy 
+              tìm kiếm khi nhà tuyển dụng tìm hồ sơ ứng viên.
+            - Thẻ <h2>: Đánh dấu tiêu đề phụ cấp 2, duy trì trật tự Document Heading Hierarchy.
+            - Danh sách <ul> / <li>: Trình duyệt hiểu đây là một tập hợp các mục có quan hệ đẳng cấp, 
+              trình đọc màn hình sẽ thông báo trước tổng số lượng mục (e.g. "Danh sách gồm 5 mục").
+            ==========================================================================
+        -->
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Kỹ Năng Chuyên Môn</h2>
+            <p>Dưới đây là các công nghệ và kỹ năng cốt lõi tôi sử dụng trong quá trình phát triển web:</p>
+
+            <!-- Phân nhóm 1: Kỹ năng nền tảng cốt lõi -->
+            <h3>1. Nền Tảng Front-End Cốt Lõi (Core Web Technologies)</h3>
+            <ul>
+                <li><strong>HTML5 & Semantic Web:</strong> Xây dựng khung trang web chuẩn cấu trúc W3C, tối ưu Accessibility (ARIA) và SEO On-page.</li>
+                <li><strong>CSS3:</strong> Làm chủ Flexbox, CSS Grid, Responsive Web Design (Mobile-First), CSS Variables.</li>
+                <li><strong>JavaScript (ES6+):</strong> Lập trình hướng đối tượng, bất đồng bộ (Promises, Async/Await), DOM Manipulation, Event Loop.</li>
+                <li><strong>TypeScript:</strong> Quản lý kiểu dữ liệu chặt chẽ, tối ưu code dự án lớn và hạn chế lỗi runtime.</li>
+            </ul>
+
+            <!-- Phân nhóm 2: Thư viện & Frameworks -->
+            <h3>2. Thư Viện & Frameworks Hiện Đại</h3>
+            <ul>
+                <li><strong>React.js:</strong> Component Lifecycle, Custom Hooks, State Management (Redux Toolkit, Zustand).</li>
+                <li><strong>Next.js:</strong> Server-Side Rendering (SSR), Static Site Generation (SSG), tối ưu SEO toàn diện.</li>
+                <li><strong>Tailwind CSS:</strong> Xây dựng giao diện nhanh chóng theo phương pháp Utility-first.</li>
+            </ul>
+
+            <!-- Phân nhóm 3: Công cụ & Tiêu chuẩn chất lượng -->
+            <h3>3. Công Cụ & Tiêu Chuẩn Chất Lượng (Best Practices)</h3>
+            <ul>
+                <li><strong>Version Control:</strong> Git, GitHub Flow, Code Review, CI/CD cơ bản.</li>
+                <li><strong>Hiệu năng & SEO:</strong> Tối ưu Core Web Vitals, Google Lighthouse, Lazy Loading, nén tài nguyên.</li>
+                <li><strong>Web Accessibility (A11y):</strong> Đạt chuẩn WCAG 2.1 AA, kiểm thử bằng Screen Reader và điều hướng bàn phím.</li>
+            </ul>
+        </section>
+        <hr>
+
+        <!-- 
+            ==========================================================================
+            SECTION 3: <section id="projects"> - DỰ ÁN NỔI BẬT
+            --------------------------------------------------------------------------
+            - Vai trò ngữ nghĩa: Khu vực trưng bày các dự án thực tế đã hoàn thành.
+            - THẺ <article>:
+              + Vai trò: Đại diện cho một đơn vị nội dung độc lập, khép kín (self-contained), 
+                có thể tách riêng và tái sử dụng trên các nền tảng khác (như blog post, tin tức, thẻ dự án).
+              + Trình duyệt & SEO: Hỗ trợ Google hiểu từng dự án là một thực thể độc lập,
+                dễ dàng hiển thị dưới dạng Rich Snippets hoặc cấu trúc Carousel trên tìm kiếm.
+              + Accessibility: Phân định ranh giới rõ ràng giữa các dự án để người khiếm thị không bị nhầm lẫn.
+            - THẺ <time>: Cung cấp thời gian chuẩn hóa bằng thuộc tính `datetime`, giúp máy tính hiểu chính xác.
+            ==========================================================================
+        -->
+        <section id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Dự Án Nổi Bật</h2>
+            <p>Tuyển tập các dự án tiêu biểu minh chứng cho năng lực lập trình và tư duy phát triển sản phẩm:</p>
+
+            <!-- Dự án 1 -->
+            <article>
+                <h3>Dự án 1: Bảng Điều Khiển Tài Chính Phân Tích Nexus (Nexus Dashboard)</h3>
+                <p>
+                    <strong>Thời gian thực hiện:</strong> 
+                    <time datetime="2025-10">Tháng 10/2025</time> – <time datetime="2026-01">Tháng 01/2026</time>
+                </p>
+                <p><strong>Công nghệ sử dụng:</strong> React.js, TypeScript, Chart.js, Tailwind CSS.</p>
+                <p>
+                    <strong>Mô tả dự án:</strong> Hệ thống Dashboard hỗ trợ quản lý dòng tiền doanh nghiệp với khả năng hiển thị
+                    biểu đồ biến động tài chính theo thời gian thực, lọc dữ liệu nhiều chiều và xuất báo cáo tự động.
+                </p>
+                <p>
+                    <strong>Kết quả đạt được:</strong> Tốc độ tải trang dưới 1.2s, điểm Google Lighthouse đạt 97/100, 
+                    hỗ trợ giao diện Dark/Light mode và điều hướng bàn phím 100%.
+                </p>
+                <p>
+                    <a href="https://example.com/demo-nexus" target="_blank" rel="noopener noreferrer">Xem Demo Trực Tiếp</a> | 
+                    <a href="https://github.com/example/nexus-dashboard" target="_blank" rel="noopener noreferrer">Xem Mã Nguồn GitHub</a>
+                </p>
+            </article>
+            <br>
+
+            <!-- Dự án 2 -->
+            <article>
+                <h3>Dự án 2: Nền Tảng Thương Mại Điện Tử Thời Trang Aura (Aura E-Commerce)</h3>
+                <p>
+                    <strong>Thời gian thực hiện:</strong> 
+                    <time datetime="2025-05">Tháng 05/2025</time> – <time datetime="2025-09">Tháng 09/2025</time>
+                </p>
+                <p><strong>Công nghệ sử dụng:</strong> Next.js, Redux Toolkit, RESTful API, Stripe Checkout.</p>
+                <p>
+                    <strong>Mô tả dự án:</strong> Trang web mua sắm trực tuyến hỗ trợ phân trang thông minh, bộ lọc sản phẩm đa tiêu chí, 
+                    giỏ hàng lưu trữ cục bộ và quy trình thanh toán một bước an toàn.
+                </p>
+                <p>
+                    <strong>Kết quả đạt được:</strong> Tối ưu cấu trúc Schema.org (Product, BreadcrumbList) đưa sản phẩm lên top kết quả tìm kiếm Google.
+                </p>
+                <p>
+                    <a href="https://example.com/demo-aura" target="_blank" rel="noopener noreferrer">Xem Demo Trực Tiếp</a> | 
+                    <a href="https://github.com/example/aura-ecommerce" target="_blank" rel="noopener noreferrer">Xem Mã Nguồn GitHub</a>
+                </p>
+            </article>
+            <br>
+
+            <!-- Dự án 3 -->
+            <article>
+                <h3>Dự án 3: Ứng Dụng Quản Trị Công Việc TaskFlow (TaskFlow App)</h3>
+                <p>
+                    <strong>Thời gian thực hiện:</strong> 
+                    <time datetime="2025-01">Tháng 01/2025</time> – <time datetime="2025-04">Tháng 04/2025</time>
+                </p>
+                <p><strong>Công nghệ sử dụng:</strong> JavaScript (ES6+), HTML5 Drag and Drop API, IndexedDB.</p>
+                <p>
+                    <strong>Mô tả dự án:</strong> Ứng dụng quản lý công việc theo mô hình bảng Kanban, hỗ trợ kéo thả trực quan các thẻ công việc, 
+                    hoạt động độc lập cả khi ngoại tuyến (Offline-First) nhờ lưu trữ dữ liệu trong IndexedDB.
+                </p>
+                <p>
+                    <strong>Kết quả đạt được:</strong> Ứng dụng nhẹ dưới 100KB, chạy mượt mà trên tất cả các trình duyệt hiện đại không cần cài đặt thư viện ngoài.
+                </p>
+                <p>
+                    <a href="https://example.com/demo-taskflow" target="_blank" rel="noopener noreferrer">Xem Demo Trực Tiếp</a> | 
+                    <a href="https://github.com/example/taskflow" target="_blank" rel="noopener noreferrer">Xem Mã Nguồn GitHub</a>
+                </p>
+            </article>
+        </section>
+        <hr>
+
+        <!-- 
+            ==========================================================================
+            SECTION 4: <section id="contact"> - LIÊN HỆ & THẺ <address>
+            --------------------------------------------------------------------------
+            - THẺ <address>:
+              + Vai trò ngữ nghĩa: Chuyên dụng để chứa thông tin liên hệ chính thức của tác giả/chủ sở hữu trang.
+              + Trình duyệt: Mặc định hiển thị chữ nghiêng (italic), biểu thị thông tin danh tính.
+              + SEO: Cung cấp tín hiệu cực mạnh cho công cụ tìm kiếm về thông tin thực thể (NAP - Name, Address, Phone, Email),
+                góp phần xây dựng uy tín thực thể tác giả (E-E-A-T: Experience, Expertise, Authoritativeness, Trustworthiness).
+              + Accessibility: Screen Reader tự động công bố đây là khối thông tin địa chỉ/liên lạc.
+            
+            - BIỂU MẪU <form> VÀ CẶP THẺ <label> / <input>:
+              + Thuộc tính `for` trên <label> phải trùng khớp chính xác với `id` của <input>/<textarea>.
+              + Trình duyệt: Khi người dùng nhấp chuột vào chữ trên nhãn (<label>), con trỏ chuột tự động focus vào ô nhập liệu.
+              + Accessibility: Trình đọc màn hình đọc to tên nhãn khi người khiếm thị chuyển con trỏ tới ô nhập liệu. 
+                Nếu thiếu <label>, người khiếm thị sẽ không biết ô này dùng để điền thông tin gì.
+            ==========================================================================
+        -->
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Liên Hệ & Hợp Tác</h2>
+            <p>Hãy để lại lời nhắn hoặc liên hệ trực tiếp với tôi qua các kênh thông tin dưới đây:</p>
+
+            <!-- Thông tin liên hệ tác giả -->
+            <address>
+                <p><strong>Thông tin tác giả:</strong> Lương Minh Đạt</p>
+                <p><strong>Email:</strong> <a href="mailto:dat.luongminh@example.com">dat.luongminh@example.com</a></p>
+                <p><strong>Điện thoại:</strong> <a href="tel:+84987654321">(+84) 987 654 321</a></p>
+                <p><strong>Địa điểm:</strong> Hà Nội / TP. Hồ Chí Minh, Việt Nam (Nhận làm việc Remote hoặc On-site)</p>
+            </address>
+
+            <!-- Biểu mẫu liên hệ chuẩn Semantic -->
+            <form action="#" method="POST" aria-label="Biểu mẫu liên hệ hợp tác">
+                <fieldset>
+                    <legend><strong>Gửi Lời Nhắn Đến Lương Minh Đạt</strong></legend>
+
+                    <p>
+                        <label for="fullname">Họ và tên của bạn (*):</label><br>
+                        <input type="text" id="fullname" name="fullname" placeholder="Ví dụ: Nguyễn Văn A" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Địa chỉ Email liên hệ (*):</label><br>
+                        <input type="email" id="email" name="email" placeholder="Ví dụ: name@example.com" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Số điện thoại:</label><br>
+                        <input type="tel" id="phone" name="phone" placeholder="Ví dụ: 0987654321">
+                    </p>
+
+                    <p>
+                        <label for="subject">Chủ đề trao đổi:</label><br>
+                        <select id="subject" name="subject">
+                            <option value="project">Hợp tác dự án phát triển Website</option>
+                            <option value="job">Cơ hội việc làm / Tuyển dụng Front-End</option>
+                            <option value="consulting">Tư vấn giải pháp kỹ thuật / SEO / A11y</option>
+                            <option value="other">Chủ đề khác</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="message">Nội dung chi tiết (*):</label><br>
+                        <textarea id="message" name="message" rows="5" cols="40" placeholder="Hãy mô tả chi tiết về dự án hoặc lời nhắn của bạn..." required></textarea>
+                    </p>
+
+                    <p>
+                        <button type="submit">Gửi Tin Nhắn</button>
+                        <button type="reset">Nhập Lại</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+    <hr>
+
+    <!-- 
+        ==============================================================================
+        5. THẺ <footer>: PHẦN CHÂN TRANG WEB
+        ------------------------------------------------------------------------------
+        - Vai trò ngữ nghĩa: Chứa thông tin kết thúc tài liệu hoặc một phần tài liệu (Footer).
+        - Trình duyệt: Định vị ranh giới cuối trang (Bottom boundary).
+        - SEO: Chứa liên kết bản quyền, điều khoản sử dụng, chính sách bảo mật và các liên kết 
+          mạng xã hội chính thống giúp xác minh hồ sơ tác giả trên mạng Internet.
+        - Accessibility: Đóng vai trò ARIA Landmark "contentinfo". Người dùng thiết bị trợ năng 
+          nhận diện ngay đây là thông tin pháp lý và thông tin liên kết tổng kết trang.
+        - Thẻ <small>: Thể hiện các văn bản mang tính pháp lý, bản quyền (Fine Print).
+        ==============================================================================
+    -->
+    <footer>
+        <p>
+            <strong>Lương Minh Đạt - Front-End Web Developer Portfolio</strong>
+        </p>
+
+        <!-- Mạng xã hội -->
+        <nav aria-label="Liên kết mạng xã hội của Lương Minh Đạt">
+            <p><strong>Kết nối mạng xã hội:</strong></p>
+            <ul>
+                <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+            </ul>
+        </nav>
+
+        <!-- Bản quyền và điều hướng nhanh -->
+        <p>
+            <small>&copy; 2026 Lương Minh Đạt. Tất cả các quyền được bảo lưu. Trang web được xây dựng hoàn toàn bằng Semantic HTML5 chuẩn W3C.</small>
+        </p>
+        <p>
+            <a href="#about">Về đầu trang &uarr;</a>
+        </p>
+    </footer>
+
+</body>
+</html>
